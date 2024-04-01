@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+}
+
+group 'com.sidroded'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testImplementation 'junit:junit:4.13.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    annotationProcessor 'org.projectlombok:lombok:1.18.24'
+    compileOnly 'org.projectlombok:lombok:1.18.24'
+    implementation 'org.hibernate.orm:hibernate-core:6.1.0.Final'
+    implementation group: 'org.flywaydb', name: 'flyway-mysql', version: '9.22.3'
+    implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.28'
+
+}
+
+test {
+    useJUnitPlatform()
+}
