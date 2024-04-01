@@ -4,35 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a111544c-1dc2-470f-b548-6e6ce3dcc7f4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sidroded/FlywayMigration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sidroded/database/Database.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sidroded/database/dao/ClientDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sidroded/database/dao/PlanetDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sidroded/database/entity/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sidroded/database/entity/Planet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sidroded/database/service/ClientCrudService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sidroded/database/service/PlanetCrudService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sidroded/hibernate/HibernateUtilClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sidroded/hibernate/HibernateUtilPlanet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/db/migration/V1__create_db.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/db/migration/V2__populate_db.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/hibernate.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/sidroded/database/dao/ClientDaoTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/sidroded/database/dao/PlanetDaoTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="a111544c-1dc2-470f-b548-6e6ce3dcc7f4" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -193,7 +165,7 @@
       <workItem from="1711798111609" duration="114000" />
       <workItem from="1711798868488" duration="3547000" />
       <workItem from="1711908786927" duration="3000000" />
-      <workItem from="1711973257275" duration="1599000" />
+      <workItem from="1711973257275" duration="1683000" />
     </task>
     <servers />
   </component>
