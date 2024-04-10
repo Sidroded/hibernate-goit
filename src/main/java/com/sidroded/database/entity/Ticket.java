@@ -17,16 +17,16 @@ public class Ticket {
     @Column(name = "created_at", nullable = false)
     private LocalDateTime createdAt;
 
-    @OneToOne
-    @JoinColumn(name = "client_id")
+    @ManyToOne(cascade = CascadeType.MERGE)
+    @JoinColumn(name="client_id", nullable=false)
     private Client client;
 
-    @OneToOne
-    @JoinColumn(name = "from_planet_id")
+    @ManyToOne(cascade = {CascadeType.MERGE, CascadeType.REMOVE})
+    @JoinColumn(name="from_planet_id", nullable=false)
     private Planet fromPlanet;
 
-    @OneToOne
-    @JoinColumn(name = "to_planet_id")
+    @ManyToOne(cascade = {CascadeType.MERGE, CascadeType.REMOVE})
+    @JoinColumn(name="to_planet_id", nullable=false)
     private Planet toPlanet;
 
 }

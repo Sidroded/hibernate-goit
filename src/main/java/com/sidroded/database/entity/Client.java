@@ -1,14 +1,13 @@
 package com.sidroded.database.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Data
-@NoArgsConstructor
-@AllArgsConstructor
 @Table(name = "client")
 public class Client {
     @Id
@@ -18,4 +17,13 @@ public class Client {
 
     @Column(name = "name", length = 200)
     private String name;
+
+    @OneToMany(mappedBy ="client", cascade = CascadeType.ALL)
+    private List<Ticket> tickets = new ArrayList<>();
+
+    public Client() {}
+
+    public Client(String name) {
+        this.name = name;
+    }
 }

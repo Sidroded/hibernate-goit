@@ -19,6 +19,7 @@ import static org.junit.jupiter.api.Assertions.assertNull;
 public class TicketDaoTest {
     private final TicketDao ticketDao = new TicketDao();
     private Ticket testTicket;
+    private Client testClient = new Client();
     private Planet testFromPlanet = new Planet("TESTFROM", "TESTFROM");
     private Planet testToPlanet = new Planet("TESTTO", "TESTTO");
 
@@ -27,7 +28,7 @@ public class TicketDaoTest {
         ClientCrudService clientCrudService = new ClientCrudService();
         PlanetCrudService planetCrudService = new PlanetCrudService();
 
-        Client testClient = new Client();
+
         testClient.setName("Test Client" + UUID.randomUUID());
         testFromPlanet = new Planet("TESTFROM", "TESTFROM");
         testToPlanet = new Planet("TESTTO", "TESTTO");
@@ -69,7 +70,8 @@ public class TicketDaoTest {
 
     @Test
     void testUpdateTicket() {
-        testTicket.setClient(new Client(Long.MAX_VALUE, "TESTUPDATE"));
+        testClient.setName("NEW NAME");
+        testTicket.setClient(testClient);
         ticketDao.update(testTicket);
         Ticket updatedTicket = ticketDao.findById(testTicket.getId());
         assertEquals(updatedTicket.getClient().getName(), testTicket.getClient().getName());
