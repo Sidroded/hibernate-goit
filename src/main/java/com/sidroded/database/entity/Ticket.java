@@ -18,7 +18,7 @@ public class Ticket {
     private LocalDateTime createdAt;
 
     @OneToOne
-    @JoinColumn(name = "profile_id")
+    @JoinColumn(name = "client_id")
     private Client client;
 
     @OneToOne
