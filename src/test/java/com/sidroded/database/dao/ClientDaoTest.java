@@ -1,7 +1,7 @@
 package com.sidroded.database.dao;
 
 import com.sidroded.database.entity.Client;
-import com.sidroded.hibernate.HibernateUtilClient;
+import com.sidroded.hibernate.HibernateUtil;
 import org.hibernate.SessionFactory;
 import org.junit.jupiter.api.*;
 
@@ -15,7 +15,7 @@ public class ClientDaoTest {
 
     @BeforeAll
     public static void setUp() {
-        sessionFactory = HibernateUtilClient.getInstance().getSessionFactory();
+        sessionFactory = HibernateUtil.getInstance().getSessionFactory();
         clientDao = new ClientDao();
     }
 

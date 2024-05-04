@@ -1,7 +1,7 @@
 package com.sidroded.database.dao;
 
 import com.sidroded.database.entity.Planet;
-import com.sidroded.hibernate.HibernateUtilPlanet;
+import com.sidroded.hibernate.HibernateUtil;
 import org.hibernate.SessionFactory;
 import org.junit.jupiter.api.*;
 
@@ -15,7 +15,7 @@ public class PlanetDaoTest {
 
     @BeforeAll
     public static void setUp() {
-        sessionFactory = HibernateUtilPlanet.getInstance().getSessionFactory();
+        sessionFactory = HibernateUtil.getInstance().getSessionFactory();
         planetDao = new PlanetDao();
     }
 

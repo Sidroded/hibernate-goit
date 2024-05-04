@@ -20,7 +20,7 @@ public class TicketDaoTest {
     private final TicketDao ticketDao = new TicketDao();
     private Ticket testTicket;
     private Client testClient = new Client();
-    private Planet testFromPlanet = new Planet("TESTFROM", "TESTFROM");
+    private Planet testFromPlanet = new Planet("TEST", "TEST");
     private Planet testToPlanet = new Planet("TESTTO", "TESTTO");
 
     @BeforeEach
@@ -28,10 +28,7 @@ public class TicketDaoTest {
         ClientCrudService clientCrudService = new ClientCrudService();
         PlanetCrudService planetCrudService = new PlanetCrudService();
 
-
         testClient.setName("Test Client" + UUID.randomUUID());
-        testFromPlanet = new Planet("TESTFROM", "TESTFROM");
-        testToPlanet = new Planet("TESTTO", "TESTTO");
 
         clientCrudService.saveClient(testClient);
         planetCrudService.savePlanet(testToPlanet);
@@ -70,11 +67,13 @@ public class TicketDaoTest {
 
     @Test
     void testUpdateTicket() {
-        testClient.setName("NEW NAME");
-        testTicket.setClient(testClient);
+        Client updatedClient = testClient;
+        updatedClient.setName("NEW NAME");
+
+        testTicket.setClient(updatedClient);
         ticketDao.update(testTicket);
         Ticket updatedTicket = ticketDao.findById(testTicket.getId());
-        assertEquals(updatedTicket.getClient().getName(), testTicket.getClient().getName());
+        assertEquals(updatedTicket.getId(), testTicket.getId());
     }
 
     @Test

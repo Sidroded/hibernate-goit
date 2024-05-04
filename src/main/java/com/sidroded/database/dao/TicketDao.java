@@ -1,13 +1,13 @@
 package com.sidroded.database.dao;
 
 import com.sidroded.database.entity.Ticket;
-import com.sidroded.hibernate.HibernateUtilTicket;
+import com.sidroded.hibernate.HibernateUtil;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 
 public class TicketDao {
-    private final SessionFactory sessionFactory = HibernateUtilTicket.getInstance().getSessionFactory();
+    private final SessionFactory sessionFactory = HibernateUtil.getInstance().getSessionFactory();
 
     public void save(Ticket ticket) {
         try (Session session = sessionFactory.openSession()) {

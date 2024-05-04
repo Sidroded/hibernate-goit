@@ -22,11 +22,15 @@ public class Ticket {
     private Client client;
 
     @ManyToOne(cascade = {CascadeType.MERGE, CascadeType.REMOVE})
-    @JoinColumn(name="from_planet_id", nullable=false)
+    @JoinColumn(name="from_planet_id")
     private Planet fromPlanet;
 
     @ManyToOne(cascade = {CascadeType.MERGE, CascadeType.REMOVE})
-    @JoinColumn(name="to_planet_id", nullable=false)
+    @JoinColumn(name="to_planet_id")
     private Planet toPlanet;
+    @PrePersist
+    public void prePersist() {
+        this.createdAt = LocalDateTime.now();
+    }
 
 }

@@ -1,13 +1,13 @@
 package com.sidroded.database.dao;
 
 import com.sidroded.database.entity.Client;
-import com.sidroded.hibernate.HibernateUtilClient;
+import com.sidroded.hibernate.HibernateUtil;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 
 public class ClientDao {
-    private final SessionFactory sessionFactory = HibernateUtilClient.getInstance().getSessionFactory();
+    private final SessionFactory sessionFactory = HibernateUtil.getInstance().getSessionFactory();
 
     public void save(Client client) {
         try (Session session = sessionFactory.openSession()) {

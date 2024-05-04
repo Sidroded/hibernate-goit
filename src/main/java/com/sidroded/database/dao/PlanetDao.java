@@ -1,13 +1,13 @@
 package com.sidroded.database.dao;
 
 import com.sidroded.database.entity.Planet;
-import com.sidroded.hibernate.HibernateUtilPlanet;
+import com.sidroded.hibernate.HibernateUtil;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 
 public class PlanetDao {
-    private final SessionFactory sessionFactory = HibernateUtilPlanet.getInstance().getSessionFactory();
+    private final SessionFactory sessionFactory = HibernateUtil.getInstance().getSessionFactory();
 
     public void save(Planet planet) {
         try (Session session = sessionFactory.openSession()) {
